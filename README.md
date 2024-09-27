@@ -6,13 +6,13 @@ Built by [Andre Saddler](https://github.com/axsddlr/)
 
 ## Current Endpoints
 
-All endpoints are relative to [https://vlrggapi.vercel.app](https://vlrggapi.vercel.app).
+All endpoints are relative to [https://vlrggapi-edited.vercel.app](https://vlrggapi.vercel.app).
 
 ### `/news`
 
 - Method: `GET`
 - Description: Fetches the latest news articles related to Valorant Esports.
-- Example: `GET https://vlrggapi.vercel.app/news`
+- Example: `GET https://vlrggapi_edited.vercel.app/news`
 - Response Example:
 
 ```json
@@ -53,7 +53,7 @@ All endpoints are relative to [https://vlrggapi.vercel.app](https://vlrggapi.ver
   - `agent`: The name of an agent (e.g., "breach", "viper", or all").
   - `map_id` : The ID of a map (e.g., "13" for Abyss, or all).
   - `timespan`: Time span in days (e.g., "30" for the last 30 days, or "all" for all time).
-- Example: `GET https://vlrggapi.vercel.app/?event_group_id=62&event_id=2181&series_id=all&region=eu&min_rounds=0&min_rating=0&agent=all&map_id=all&timespan=all`
+- Example: `GET https://vlrggapi-edited.vercel.app/?event_group_id=62&event_id=2181&series_id=all&region=eu&min_rounds=0&min_rating=0&agent=all&map_id=all&timespan=all`
 - Response Example:
 
 ```json
