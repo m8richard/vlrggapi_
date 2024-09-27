@@ -44,10 +44,16 @@ All endpoints are relative to [https://vlrggapi.vercel.app](https://vlrggapi.ver
 - Method: `GET`
 - Description: Fetches player statistics for a specific region and timespan.
 - Query Parameters:
+  - `event_group_id`: The ID for the circuit (e.g., GC 2024: 62, GC 2023: 38, GC 2022: 17, GC 2021: 8, or all).
+  - `event_id`: ID of the tournament (e.g., "2050" for GC 2024 Korea stage 1, or all).
+  - `series_id`: ID of the series (check the website to check IDs).
   - `region`: Region shortname (e.g., "na" for North America).
+  - `min_rounds`: The minimum number of rounds played.
+  - `min_rating`: The minimum rating of the players.
+  - `agent`: The name of an agent (e.g., "breach", "viper", or all").
+  - `map_id` : The ID of a map (e.g., "13" for Abyss, or all).
   - `timespan`: Time span in days (e.g., "30" for the last 30 days, or "all" for all time).
-- Example: `GET https://vlrggapi.vercel.app/stats?region=na&timespan=30`
-
+- Example: `GET https://vlrggapi.vercel.app/?event_group_id=62&event_id=2181&series_id=all&region=eu&min_rounds=0&min_rating=0&agent=all&map_id=all&timespan=all`
 - Response Example:
 
 ```json
