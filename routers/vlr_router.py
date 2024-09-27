@@ -19,7 +19,14 @@ async def VLR_news(request: Request):
 @limiter.limit("250/minute")
 async def VLR_stats(
     request: Request,
+    event_group_id: str = Query(..., description="type of event (GC 2024: 62, GC 2023: 38, GC 2022: 17, GC 2021: 8, or all)"),
+    event_id: str = Query(..., description="name of the tournament"),
+    series_id: str = Query(..., description="group stage, playoffs, etc"),
     region: str = Query(..., description="Region shortname"),
+    min_rounds: str = Query(..., description="min_rounds"),
+    min_rating: str = Query(..., description="min_rating"),
+    agent: str = Query(..., description="breach, viper, or all"),
+    map_id: str = Query(..., description="map_id: a number, or all"),
     timespan: str = Query(..., description="Timespan (30, 60, 90, or all)"),
 ):
     """
